@@ -18,6 +18,13 @@ body img#logo {
   margin-top: 5vh;
 }
 
+body img#menu {
+  max-width: 90vw;
+  max-height: 75vh;
+  margin-top: 5vh;
+  display: none;
+}
+
 body img#logo-small {
   max-width: 10vw;
   max-height: 15vh;

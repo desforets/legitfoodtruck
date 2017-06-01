@@ -6,10 +6,14 @@
     <link rel="stylesheet" href="css/normalize.css" media="screen" title="no title">
     <link rel="stylesheet" href="css/master.css" media="screen" title="no title">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
-  </head>
+    <link rel="stylesheet" href="css/fades.css">
+</head>
   <body>
     <div class="flex-child">
       <img id="logo" src="img/logo.png" alt="Logo image for Legit Food Co." />
+    </div>
+    <div class="flex-child fade-in">
+      <img id="menu" src="img/logo.png" alt="menuImage" />
     </div>
     <div class="flex-child email">
       <p>
@@ -19,7 +23,7 @@
       </p>
     </div>
     <nav class="flex-child">
-      <a href="./menu.html"><span>Menu</span></a>
+      <a href="#" onclick="addFadeOut('logo')"><span>Menu</span></a>
       <a href="./about.html"><span>About</span></a>
     </nav>
     <div class="social flex-child">
@@ -30,4 +34,10 @@
       </div>
     </div>
   </body>
+  <script type="text/javascript">
+    function addFadeOut(id) {
+      const target = document.getElementById(id);
+      target.className = 'animated fadeOutDown';
+    }
+  </script>
 </html>
