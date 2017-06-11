@@ -10,11 +10,24 @@
 </head>
   <body>
     <div class="flex-child">
-      <img id="logo" src="img/logo.png" alt="Logo image for Legit Food Co." />
+      <img id="logo" class="active" src="img/logo.png" alt="Logo image for Legit Food Co." />
+      <img id="menu" class="" src="img/menu.jpg" alt="Menu image for Legit Food Co." />
+      <img id="about" class="" src="img/about.jpeg" alt="About Legit Food Co." />
     </div>
-    <div class="flex-child fade-in">
-      <img id="menu" src="img/logo.png" alt="menuImage" />
+    <div class="social flex-child">
+      <div class="icon-box">
+        <a href="https://www.facebook.com/legitfoodtruck">
+          <i class="fa fa-3x fa-facebook"></i>
+        </a>
+        <a href="https://www.instagram.com/legitfoodtruck">
+          <i class="fa fa-3x fa-instagram"></i>
+        </a>
+        <a href="https://www.twitter.com/legitfoodtruck">
+          <i class="fa fa-3x fa-twitter"></i>
+        </a>
+      </div>
     </div>
+
     <div class="flex-child email">
       <p>
         <a href="mailto:legitfoodtruck@gmail.com" style="text-align: center;">
@@ -22,22 +35,34 @@
         </a>
       </p>
     </div>
+
     <nav class="flex-child">
-      <a href="#" onclick="addFadeOut('logo')"><span>Menu</span></a>
-      <a href="./about.html"><span>About</span></a>
+      <a href="#" onclick="addFadeIn('menu'); fadeOut();"><span>Menu</span></a>
+      <a href="#" onclick="addFadeIn('about'); fadeOut();"><span>About</span></a>
     </nav>
-    <div class="social flex-child">
-      <div class="icon-box">
-        <a href="https://www.instagram.com/legitfoodtruck">
-          <i class="fa fa-3x fa-instagram"></i>
-        </a>
-      </div>
-    </div>
+
   </body>
   <script type="text/javascript">
-    function addFadeOut(id) {
-      const target = document.getElementById(id);
+    function fadeOut() {
+      const target = document.getElementsByClassName('active')[0];
       target.className = 'animated fadeOutDown';
     }
+    function addFadeIn(id) {
+      const target = document.getElementById(id);
+      const out = document.getElementsByClassName('active')[0];
+      setTimeout(
+        function(){
+          out.style.display = 'none';
+          target.style.display = 'block';
+          target.className = 'animated fadeInDown active';
+        }, 500)
+    }
+    const start = 0;
+    window.addEventListener('scroll', function(){
+      start++
+      if(start == 1){
+        console.log('scrolled!');
+      }
+    })
   </script>
 </html>

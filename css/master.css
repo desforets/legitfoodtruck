@@ -1,3 +1,7 @@
+html {
+  overflow: hidden;
+}
+
 body {
   background-color: black;
   color: gold;
@@ -13,16 +17,16 @@ body {
 }
 
 body img#logo {
-  max-width: 90vw;
-  max-height: 75vh;
+  max-height: 60vh;
+  max-width: 95vw;
   margin-top: 5vh;
 }
 
-body img#menu {
-  max-width: 90vw;
-  max-height: 75vh;
-  margin-top: 5vh;
+body img#menu, body img#about {
+  max-width: 95vw;
   display: none;
+  margin-top: 5vh;
+  max-height: 58vh;
 }
 
 body img#logo-small {
@@ -49,7 +53,7 @@ body img#logo-small {
 }
 
 .social i {
-  padding: 0.5em;
+  padding: 0.5em 0.5em 0.15em 0.5em;
   margin: auto;
   justify-content: space-around;
   flex-grow: 1;
@@ -60,9 +64,7 @@ body img#logo-small {
 }
 
 .email {
-  margin-top: 0.5em;
 }
 
 nav {
-  margin-top: 0.5em;
 }
